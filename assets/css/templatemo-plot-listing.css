@@ -141,9 +141,11 @@ img {
 global styles
 --------------------------------------------- 
 */
+
+/* main back color  */
 html,
 body {
-  background: #fff;
+  background: #ffffff;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -194,32 +196,47 @@ body {
   font-weight: 500;
   color: #8d99af;
 }
-
+/* book your seat */
 .main-white-button a {
   display: inline-block;
-  background-color: #fff;
+  background-color:#70abc6;
   font-size: 15px;
   font-weight: 400;
-  color: #2a2a2a;
+  color:rgb(255, 255, 255);
   text-transform: capitalize;
   padding: 12px 25px;
   border-radius: 7px;
   letter-spacing: 0.25px;
   transition: all .3s;
 }
-
-.main-white-button a i {
+/* book your seat + */
+/* .main-white-button a i {
   margin-right: 10px;
   width: 22px;
   height: 22px;
-  background-color: #8d99af;
+  background-color: #3b7377;
   color: #fff;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
   font-size: 12px;
   line-height: 22px;
+} */
+.main-white-button a {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 7px;
+  letter-spacing: 0.25px;
+  transition: all .3s;
+  background: linear-gradient(to right, #53bbb1, #6aa7a1, #40c1b4, #d5dcdb);
+  background-size: 200% auto;
+  background-position: 0% 50%;
 }
+
+
 
 .main-white-button a:hover {
   background-color: #8d99af;
@@ -724,7 +741,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/2.png);
   padding: 290px 0px 180px 0px;
   position: relative;
   overflow: hidden;
@@ -735,20 +752,38 @@ Banner Style
 }
 
 .main-banner .top-text h6 {
-  color: #fff;
-  font-size: 15px;
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-.main-banner .top-text h2 {
-  color: #fff;
+/* .main-banner .top-text h2 {
+  color: #545ceb;
   font-size: 45px;
   font-weight: 800;
   text-transform: capitalize;
   margin-top: 15px;
   margin-bottom: 45px;
+} */
+
+/* anas */
+.main-banner .top-text h2 {
+  font-size: 45px;
+  font-weight: 800;
+  text-transform:capitalize;
+  margin-top: 15px;
+  margin-bottom: 45px;
+  padding: 15px;
+  background: linear-gradient(to right, #53bbb1, #6aa7a1,#40c1b4, #d5dcdb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+
+
+
+
 
 .main-banner ul.categories {
   width: 100%;
@@ -828,7 +863,9 @@ form#search-form input::placeholder {
 form#search-form button {
   width: 100%;
   height: 100%;
-  background-color: #8d99af;
+  background: linear-gradient(to right, #53bbb1, #6aa7a1, #40c1b4, #d5dcdb);
+  background-size: 200% auto;
+  background-position: 0% 50%;
   border: none;
   padding: 15px;
   color: #fff;
@@ -901,8 +938,9 @@ Popular Categories
 .popular-categories .naccs .menu div {
   color: #fff;
   font-size: 15px;
-  background-color: #8d99af;
   margin-bottom: 2px;
+  background: linear-gradient(to right, #53bbb1, #6aa7a1);
+
   height: 190px;
   text-align: left;
   padding: 1px 15px;
@@ -914,7 +952,7 @@ Popular Categories
 
 .popular-categories .naccs .menu div.active,
 .popular-categories .naccs .menu div.active .thumb {
-  background-color: #2b2d42;
+  background-color: #5e5f6c;
 }
 
 .popular-categories ul.nacc {
