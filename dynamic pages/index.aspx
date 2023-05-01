@@ -27,6 +27,58 @@ protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
   
   <head>
 
+
+                      <style>
+
+                          .css1{
+        border-style: none;
+        border-color: inherit;
+        border-width: medium;
+        margin-right: 10px;
+        background-size: 200% auto;
+        background-position: 0% 50%;
+        padding: 15px;
+        color:#000000;
+        font-size: 15px;
+        height:47px;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+
+         background-color: #fff;
+  padding: 1px 0px 0px 30px;
+  width: 100%;
+  border-radius: 7px;
+  display: inline-block;
+  text-align: center;
+    }
+                          .css2{
+
+
+                                border-style: none;
+                              border-color: inherit;
+                              border-width: medium;
+                              width: 100%;
+                              background-size: 200% auto;
+                              background-position: 0% 50%;
+                              padding: 15px;
+                              color: #000000;
+                              font-size: 15px;
+                              border-top-right-radius: 7px;
+                              border-bottom-right-radius: 7px;
+                          }
+
+
+    .dropdown-lists {
+        display:grid;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -88,10 +140,6 @@ https://templatemo.com/tm-564-plot-listing
               <li><a href="contact.aspx">Contact Us</a></li> 
               <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Book Your Seat!</a></div></li> 
             </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
@@ -106,113 +154,60 @@ https://templatemo.com/tm-564-plot-listing
           <div class="top-text header-text">
             <h6>Go Anywhere, Anytime: Book Your Tickets Now!</h6>
             <h2 class="text-focus-in ">Discover Nearby Travel Destinations And Adventures</h2>
-          </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="row">
-              <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                      <%--<select name="area" class="form-select" aria-label="Area" id="chooseCategory" onchange="this.form.click()">
-                          <option selected>Transport Type</option>
-                          <option value="Bus">Bus</option>
-                          <option value="Aeroplane">Aeroplane</option>
-                          <option value="Train">Train</option>
-                      </select>--%>
-                  </fieldset>
-              </div>
-              <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                    <%--<select name="area1" class="form-select1" aria-label="Area1" id="chooseCategory1" onchange="this.form.click()">
-                          <option selected>From Station</option>
-                          <option value="lhr">lhr</option>
-                          <option value="ryk">ryk</option>
-                          <option value="islu">islu</option>
-                      </select>--%>
-                      <br />
-                      <br />
-                  </fieldset>
-              </div>
-              <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                      <%-- <select name="area2" class="form-select2" aria-label="Area2" id="chooseCategory2" onchange="this.form.click()">
-                          <option selected>To Station</option>
-                          <option value="lhr">lhr</option>
-                          <option value="ryk">ryk</option>
-                          <option value="islu">islu</option>
-                      </select>--%>
-                      <br />
-                  </fieldset>
-              </div>
-              <%--<div class="col-lg-3">--%>                        
-                  <fieldset>
-           <div class="dropdown-lists">
-    <fieldset>
-        <asp:DropDownList ID="DropDownList1" cssclass="css1" AutoPostBack="True" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" Width="210px"></asp:DropDownList>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="DropDownList2" cssclass="css1" value="as" AutoPostBack="True" runat="server" DataSourceID="SqlDataSource2" DataTextField="from_location" DataValueField="from_location" Width="288px"></asp:DropDownList>
+              <fieldset>
+                  <div class="dropdown-lists">
+                      <fieldset>
+                          <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                          <asp:DropDownList ID="DropDownList1" cssclass="css1" AutoPostBack="True" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="type" DataValueField="type" Width="162px">
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList4" cssclass="css1" runat="server"  AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="vehicle_name" DataValueField="vehicle_name" Height="46px" Width="199px">
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:DropDownList ID="DropDownList2" cssclass="css1" value="as" AutoPostBack="True" runat="server" DataSourceID="SqlDataSource2" DataTextField="from_location" DataValueField="from_location" Width="288px">
+                          </asp:DropDownList>
        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;
        
-        <asp:DropDownList ID="DropDownList3" cssclass="css1"  runat="server" DataSourceID="SqlDataSource3" DataTextField="to_location" DataValueField="to_location" Width="229px"></asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList3" cssclass="css1"  runat="server" DataSourceID="SqlDataSource3" DataTextField="to_location" DataValueField="to_location" Width="229px" AutoPostBack="True">
+                          </asp:DropDownList>
         &nbsp;
 
 
 
 
-                      <asp:Button ID="Button1" runat="server"  CssClass="css1" OnClick="Button1_Click" Text="Button" />
-
-
-                  <br />
-        <br />
-        <br />
-        <br />
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="GetToLocationsByVehicleType" SelectCommandType="StoredProcedure">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="DropDownList1" Name="vehicleType"  Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource1"   runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="select v.type from [vehicle] v group by v.type"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="GetFromLocationsByVehicleType" SelectCommandType="StoredProcedure">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="DropDownList1" Name="vehicleType" PropertyName="SelectedValue" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-    </fieldset>
-<%--</div>--%>
-
-
-<style>
-    .css1{
-        border-style: none;
-        border-color: inherit;
-        border-width: medium;
-        margin-right: 10px;
-        background-size: 200% auto;
-        background-position: 0% 50%;
-        padding: 15px;
-        color:#000000;
-        font-size: 15px;
-        
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
-    }
-
-    .dropdown-lists {
-        display:grid;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-</style>
-
-
-
-
-                  &nbsp;</fieldset>
-              </div>
-            </div>
+                          <asp:Button ID="Button1" runat="server"  CssClass="css2" OnClick="Button1_Click" Text="BOOK NOW!" Width="448px" />
+                          <asp:DropDownList ID="DropDownList5" cssclass="css1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource5" DataTextField="time" DataValueField="time" Height="27px" Width="205px">
+                          </asp:DropDownList>
+                          <br />
+                          <br />
+                          <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="GetToLocationsByVehicleType" SelectCommandType="StoredProcedure">
+                              <SelectParameters>
+                                  <asp:ControlParameter ControlID="DropDownList4" Name="vehicleName"  Type="String" PropertyName="SelectedValue" />
+                              </SelectParameters>
+                          </asp:SqlDataSource>
+                          <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="GetTimeSlot" SelectCommandType="StoredProcedure">
+                              <SelectParameters>
+                                  <asp:ControlParameter ControlID="DropDownList2" Name="from_location" PropertyName="SelectedValue" Type="String" />
+                                  <asp:ControlParameter ControlID="DropDownList3" Name="to_location" PropertyName="SelectedValue" Type="String" />
+                                  <asp:ControlParameter ControlID="DropDownList4" Name="name" PropertyName="SelectedValue" Type="String" />
+                              </SelectParameters>
+                          </asp:SqlDataSource>
+                          <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="get_vehicle_names" SelectCommandType="StoredProcedure">
+                              <SelectParameters>
+                                  <asp:ControlParameter ControlID="DropDownList1" Name="type" PropertyName="SelectedValue" Type="String" />
+                              </SelectParameters>
+                          </asp:SqlDataSource>
+                          <asp:SqlDataSource ID="SqlDataSource1"   runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="select v.type from [vehicle] v group by v.type"></asp:SqlDataSource>
+                          <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TicketMasterDBConnectionString %>" SelectCommand="GetFromLocationsByVehicleType" SelectCommandType="StoredProcedure">
+                              <SelectParameters>
+                                  <asp:ControlParameter ControlID="DropDownList4" Name="vehicleName" PropertyName="SelectedValue" Type="String" DefaultValue="" />
+                              </SelectParameters>
+                          </asp:SqlDataSource>
+                      </fieldset></div>
+              </fieldset>
           </div>
-&nbsp;&nbsp;&nbsp;
+        </div>
+          </div>
           </form>
         </div>
         <div class="col-lg-10 offset-lg-1">
