@@ -34,8 +34,8 @@ CREATE TABLE aero (
 );
 
 CREATE TABLE feedback (
-    feedback_text VARCHAR(500) NOT NULL,
-    cnic int primary key,
+    feedback_text VARCHAR(500),
+    cnic bigint ,
     FOREIGN KEY (cnic) REFERENCES profiles (cnic)
 
 );
